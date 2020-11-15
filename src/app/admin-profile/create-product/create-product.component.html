@@ -1,0 +1,82 @@
+<section id="contact" class="contact">
+    <div class="container" data-aos="fade-up">
+
+
+
+      <div class="row mt-5">
+
+
+
+        <div class="col-lg-8 mt-5 mt-lg-0">
+
+          <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+
+            <div class="form-row">
+                <div class="col-md-6 form-group">
+                    <span>Choose category:</span>
+                  <!-- <input type="text" [(ngModel)]="CategoryIdValue" name="id" class="form-control" id="id"  data-rule="minlen:4" data-msg="Please enter at least 4 chars" /> -->
+                  <br><br>
+
+                  <select [(ngModel)]="CategoryIdValue" name="categories" id="categories">
+                    <option *ngFor="let category of categoryObjects" [ngValue]="category._id">{{ category.CategoryName }}</option>
+
+                  </select>
+                  <div class="validate"></div>
+                </div>
+               
+              </div>
+
+              <div class="form-row">
+                <div class="col-md-6 form-group">
+                    <span>ID</span>
+                  <input type="text" [(ngModel)]="IdValue" name="id" class="form-control" id="id"  data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                  <div class="validate"></div>
+                </div>
+               
+              </div>
+
+            <div class="form-row">
+              <div class="col-md-6 form-group">
+                  <span>Product Name</span>
+                <input type="text" [(ngModel)]="ProductNameValue" name="name" class="form-control" id="name"  data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                <div class="validate"></div>
+              </div>
+             
+            </div>
+
+            <div class="form-row">
+                <div class="col-md-6 form-group">
+                    <span>Details</span>
+                  <input type="text" [(ngModel)]="DetailsValue" name="details" class="form-control" id="details"  data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                  <div class="validate"></div>
+                </div>
+               
+              </div>
+
+              <div class="form-row">
+                <div class="col-md-6 form-group">
+                    <span>Price</span>
+                  <input type="text" [(ngModel)]="PriceValue" name="price" class="form-control" id="price"  data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                  <div class="validate"></div>
+                </div>
+               
+              </div>
+
+            
+              <button type="submit" (click)="CreateNewProduct()">Create!</button>
+              <br><br>
+              <button type="submit" (click)="BackToProduct()">Back to products!</button>
+
+              <br>
+              <br>
+              <br>
+              <br>
+      
+          </form>
+          
+        </div>
+
+      </div>
+
+    </div>
+  </section><!-- End Contact Section -->

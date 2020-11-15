@@ -1,0 +1,42 @@
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top ">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <h3 class="logo"><a href="index.html">F A S H I O N</a></h3>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a> -->
+
+      <nav class="nav-menu d-none d-lg-block">
+        <ul>
+          <li class="active"><a routerLink="/">Home</a></li>
+          <!-- <li><a routerLink="about">About</a></li> -->
+          <li><a routerLink="product">Products</a></li>
+          <li><a routerLink="/admin/profile" *ngIf="authService.LoggedIn()">Profile</a></li>
+
+          <!-- <li><a routerLink="cart">Cart</a></li> -->
+          <!-- <li><a href="#contact">Orders</a></li> -->
+
+          <li class="drop-down"><a routerLink="/">Categories</a>
+            <ul>
+              
+              <li><a routerLink="product">
+                All
+              </a></li>
+              <li *ngFor="let category of categoryObjects"><a routerLink="product">
+                {{category.CategoryName}}
+              </a></li>
+
+            </ul>
+          </li>
+
+        </ul>
+      </nav><!-- .nav-menu -->
+
+      <a routerLink="login" *ngIf="authService.LoggedIn()" (click)="authService.LogoutUser()" class="get-started-btn scrollto">logout</a>
+
+      <a routerLink="login" *ngIf="!authService.LoggedIn()" class="get-started-btn scrollto">Login</a>
+      <a routerLink="register" *ngIf="!authService.LoggedIn()" class="get-started-btn scrollto">Register</a>
+
+
+    </div>
+  </header><!-- End Header -->

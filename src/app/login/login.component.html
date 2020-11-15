@@ -1,0 +1,38 @@
+<section id="contact" class="contact">
+    <div class="container" data-aos="fade-up">
+
+
+
+      <div class="row mt-5">
+
+
+        <div class="col-lg-8 mt-5 mt-lg-0">
+
+          <form method="post" role="form" class="php-email-form">
+            <div class="form-row">
+              <div class="col-md-6 form-group">
+                  <span>User Name</span>
+                <input type="text" [(ngModel)]="UserNameValue" name="username" class="form-control" id="name"  data-rule="minlen:4"  />
+                <div class="validate"></div>
+              </div>
+             
+            </div>
+            <div class="form-row">
+                <div class="col-md-6 form-group">
+                    <span>Password</span>
+                    
+                    <input type="password" [(ngModel)]="PasswordValue" name="password" class="form-control" id="password"  data-rule="minlen:4" />
+                    <div class="validate"></div>
+                </div>
+               
+              </div>
+              <button type="submit" (click)="login()">Login</button>
+            
+          </form>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section><!-- End Contact Section -->

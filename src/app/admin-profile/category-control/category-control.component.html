@@ -1,0 +1,45 @@
+    <!-- ======= Features Section ======= -->
+    <section id="features" class="features">
+        <div class="container" data-aos="fade-up">
+  
+          <div class="row">
+            <!-- <div class="image col-lg-6" style='background-image: url("assets/img/features.jpg");' data-aos="fade-right"></div> -->
+            <div   class="col-lg-6" data-aos="fade-left" data-aos-delay="100">
+              <div  class="icon-box mt-5 mt-lg-0" data-aos="zoom-in" data-aos-delay="150">
+                <i class="bx bx-receipt"></i>
+                <h4>Categories</h4>
+                <p>Basic Information about Categories</p>
+            <a (click)="createCategory()"  class="get-started-btn scrollto">Create New Category</a>
+            <br><br>
+            <!-- <a (click)="ShowCategories()"  class="get-started-btn scrollto">Show</a> -->
+
+
+              </div>
+              <hr/>
+
+              <div *ngFor="let category of categoryObjects">
+                <div class="icon-box mt-5" data-aos="zoom-in" data-aos-delay="150">
+                    <i class="bx bx-cube-alt"></i>
+                    <h4>Category Name</h4>
+                    <p>{{ category.CategoryName }}</p>
+                  </div>
+                  <div class="icon-box mt-5" data-aos="zoom-in" data-aos-delay="150">
+                    <i class="bx bx-cube-alt"></i>
+                    <h4>Details</h4>
+                    <p>{{ category.Details }}</p>
+            <a (click)="deleteCategory(category._id)"  class="get-started-btn scrollto">DELETE</a>
+
+                  </div>
+                  <hr>
+
+              </div>
+              <div class="icon-box mt-5" data-aos="zoom-in" data-aos-delay="150">
+                
+                <br>
+                
+              </div>
+            </div>
+          </div>
+  
+        </div>
+      </section><!-- End Features Section -->

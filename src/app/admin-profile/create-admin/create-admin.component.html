@@ -1,0 +1,60 @@
+<section id="contact" class="contact">
+    <div class="container" data-aos="fade-up">
+
+
+
+      <div class="row mt-5">
+
+
+
+        <div class="col-lg-8 mt-5 mt-lg-0">
+
+          <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+
+            <div class="form-row">
+                <div class="col-md-6 form-group">
+                    <span>ID</span>
+                  <input type="text" [(ngModel)]="IdValue" name="id" class="form-control" id="id"  data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                  <div class="validate"></div>
+                </div>
+               
+              </div>
+
+            <div class="form-row">
+              <div class="col-md-6 form-group">
+                  <span>User Name</span>
+                <input type="text" [(ngModel)]="UserNameValue" name="name" class="form-control" id="name"  data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                <div class="validate"></div>
+              </div>
+             
+            </div>
+
+            <div class="form-row">
+                <div class="col-md-6 form-group">
+                    <span>Email</span>
+                  <input type="text" [(ngModel)]="EmailValue" name="email" class="form-control" id="email"  data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                  <div class="validate"></div>
+                </div>
+               
+              </div>
+
+            <div class="form-row">
+                <div class="col-md-6 form-group">
+                    <span>Password</span>
+                    
+                    <input type="password" [(ngModel)]="PasswordValue" name="password" class="form-control" id="password"  data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                    <div class="validate"></div>
+                </div>
+               
+              </div>
+              <button type="submit" (click)="CreateNewAdmin()">Create!</button>
+              
+      
+          </form>
+          
+        </div>
+
+      </div>
+
+    </div>
+  </section><!-- End Contact Section -->
